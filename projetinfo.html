@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Dev & Tools</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div>
+            <a href="index.html">/HOME</a>
+            <a href="cv.html">/CV_AGENT</a>
+            <a href="projetcyber.html">/OPS_CYBER</a>
+            <a href="projetinfo.html" class="active">/DEV_TOOLS</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>DÉVELOPPEMENT & SCRIPTING</h1>
+        <p style="color: #888; margin-bottom: 40px;">// Outils tactiques, architectures logicielles et POO.</p>
+
+        <div class="project-card">
+            <div class="project-header">
+                <h3>PALMON : ARCHITECTURE POO</h3>
+                <span class="status-badge done">V1.0 (STABLE)</span>
+            </div>
+            
+            <p><strong>Type :</strong> Simulation interactive (Survival Waves) en Python natif.</p>
+            
+            <p>Ce projet n'est pas qu'une application graphique : c'est une démonstration technique de <strong>Programmation Orientée Objet (POO) Avancée</strong>. L'architecture a été conçue pour être modulaire, une compétence critique pour le développement d'outils de sécurité (EDR, Sondes).</p>
+
+            <div style="margin: 15px 0;">
+                <span class="tech-tag">Python 3</span>
+                <span class="tech-tag">POO / Classes</span>
+                <span class="tech-tag">System I/O</span>
+            </div>
+            
+            <ul style="background: #111; padding: 15px; border-radius: 4px; border: 1px solid #333; list-style: none; font-size: 0.9em; color: #ccc;">
+                <li style="margin-bottom: 8px;"><span style="color:var(--highlight)">[>]</span> <strong>Modularité & Héritage :</strong> Création de classes mères génériques pour gérer les entités, permettant une scalabilité du code sans redondance.</li>
+                <li style="margin-bottom: 8px;"><span style="color:var(--highlight)">[>]</span> <strong>Logique Événementielle :</strong> Algorithme de gestion de flux (3 vagues successives) similaire au traitement de queues d'incidents.</li>
+                <li><span style="color:var(--highlight)">[>]</span> <strong>File System :</strong> Manipulation dynamique des assets et dossiers (Lecture/Écriture système).</li>
+            </ul>
+
+            <div style="background: #0b0c10; color: #00ff41; padding: 15px; border: 1px solid #333; font-family: 'JetBrains Mono', monospace; font-size: 0.8em; margin: 15px 0; border-left: 3px solid var(--secondary);">
+                <span style="color: #666;"># Exemple d'Architecture Classe Mère/Fille</span><br>
+                class Entity(pygame.sprite.Sprite):<br>
+                &nbsp;&nbsp;def __init__(self, name, velocity):<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;self.name = name<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;self.velocity = velocity<br>
+                <br>
+                class Hostile(Entity): <span style="color: #666;"># Héritage</span><br>
+                &nbsp;&nbsp;def behavior_pattern(self):<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;self.rect.x -= self.velocity
+            </div>
+
+            <a href="https://github.com/nathangerardeaux/palmon" target="_blank" class="btn">VOIR L'ARCHITECTURE (GITHUB)</a>
+        </div>
+
+        <div class="project-card" style="border-color: orange;">
+            <div class="project-header">
+                <h3 style="color: orange;">GANIS E-COMMERCE</h3>
+                <span class="status-badge wip">V2.0 (MVC)</span>
+            </div>
+            
+            <p><strong>Type :</strong> Plateforme Web Full-Stack sécurisée.</p>
+            <p>Déploiement d'une solution E-commerce respectant les standards de sécurité modernes via le framework Laravel.</p>
+            
+            <div style="margin: 15px 0;">
+                <span class="tech-tag">Laravel 10</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">Secure Auth</span>
+            </div>
+
+            <p style="border-left: 3px solid var(--secondary); padding-left: 10px; margin-bottom: 20px;">
+                <strong>Focus Sécurité :</strong> Utilisation des protections natives (Protection CSRF sur les formulaires, Middleware de filtrage des routes et ORM Eloquent pour prévenir les injections SQL).
+            </p>
+            
+            <a href="https://github.com/GabrielPETER123/ganis" target="_blank" class="btn">ACCÉDER AU REPO</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Opérations Cyber</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div>
+            <a href="index.html">/HOME</a>
+            <a href="cv.html">/CV_AGENT</a>
+            <a href="projetcyber.html" class="active">/OPS_CYBER</a>
+            <a href="projetinfo.html">/DEV_TOOLS</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>OPÉRATIONS & SÉCURITÉ</h1>
+        <p style="color: #888; margin-bottom: 40px;">// Journal des incidents, audits et architectures défensives.</p>
+
+        <div class="project-card">
+            <div class="project-header">
+                <h3>AUDIT PENTEST WINDOWS</h3>
+                <span class="status-badge done">COMPLETED</span>
+            </div>
+            <p><strong>Cible :</strong> Environnement Windows Server Legacy (SMBv1).</p>
+            <p>Simulation d'une attaque complète type "Red Team" pour identifier les vecteurs de compromission critiques.</p>
+            
+            <div style="margin: 15px 0;">
+                <span class="tech-tag">Metasploit</span>
+                <span class="tech-tag">Hashcat</span>
+                <span class="tech-tag">Wireshark</span>
+            </div>
+
+            <ul style="background: #111; padding: 15px; border-radius: 4px; border: 1px solid #333; list-style: none;">
+                <li><span style="color:var(--highlight)">[>]</span> Scan : Détection vulnérabilité MS17-010.</li>
+                <li><span style="color:var(--highlight)">[>]</span> Exploit : Injection payload Meterpreter.</li>
+                <li><span style="color:var(--highlight)">[>]</span> Post-Ex : Dump SAM & Cracking NTLM.</li>
+            </ul>
+        </div>
+
+        <div class="project-card">
+            <div class="project-header">
+                <h3>INFRASTRUCTURE SECURE</h3>
+                <span class="status-badge done">DEPLOYED</span>
+            </div>
+            <p><strong>Objectif :</strong> Architecture résiliente "Secure by Design".</p>
+            <p>Mise en place d'un réseau segmenté avec politique de moindre privilège et surveillance active.</p>
+
+            <div style="margin: 15px 0;">
+                <span class="tech-tag">Ansible</span>
+                <span class="tech-tag">Linux Hardening</span>
+                <span class="tech-tag">Zabbix</span>
+            </div>
+
+            <p style="border-left: 3px solid var(--secondary); padding-left: 10px;">
+                Intégration de sondes Zabbix pour monitorer les pics de trafic (DDoS) et les altérations de fichiers critiques.
+            </p>
+            <a href="https://github.com/AnisDerriche/projet-infra" target="_blank" class="btn">CODE SOURCE</a>
+        </div>
+
+        <div class="project-card" style="border-color: orange;">
+            <div class="project-header">
+                <h3 style="color: orange;">DRAGON SHIELD (AD)</h3>
+                <span class="status-badge wip">IN PROGRESS</span>
+            </div>
+            <p><strong>Client :</strong> Dragon Emotors (Simu).</p>
+            <p>Déploiement d'une forêt Active Directory complète pour 50 utilisateurs avec services RDS et Fichiers.</p>
+            
+            <div style="margin: 15px 0;">
+                <span class="tech-tag">Windows Server</span>
+                <span class="tech-tag">GPO</span>
+                <span class="tech-tag">Kerberos</span>
+            </div>
+
+            <p>En préparation d'un Pentest externe. Focus actuel : Durcissement des GPO et cloisonnement des accès.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
