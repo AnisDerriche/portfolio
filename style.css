@@ -70,7 +70,7 @@ nav a:hover, nav a.active {
     padding: 0 20px;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     color: #fff;
     font-family: 'JetBrains Mono', monospace;
     margin-top: 0;
@@ -82,14 +82,68 @@ h1 {
     padding-left: 15px;
 }
 
+/* Nouveaux styles pour la grille de projet */
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.project-column h4 {
+    font-size: 0.85em;
+    margin-bottom: 15px;
+    color: var(--secondary);
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+}
+
+.custom-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.85em;
+}
+
+.custom-list li {
+    margin-bottom: 8px;
+    padding-left: 18px;
+    position: relative;
+    line-height: 1.4;
+}
+
+.custom-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--highlight);
+    font-weight: bold;
+}
+
+.custom-list-block {
+    background: #111; 
+    padding: 15px; 
+    border-radius: 4px; 
+    border: 1px solid #333; 
+    list-style: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9em;
+}
+
+.highlight-project {
+    border-left: 4px solid var(--highlight) !important;
+    background: linear-gradient(to right, rgba(102, 252, 241, 0.03), transparent);
+}
+
 .btn {
     display: inline-block;
     background: transparent;
     border: 1px solid var(--highlight);
     color: var(--highlight);
-    padding: 10px 25px;
+    padding: 8px 20px;
     font-family: 'JetBrains Mono', monospace;
     text-decoration: none;
+    font-size: 0.85em;
     font-weight: bold;
     transition: all 0.3s;
     margin-top: 10px;
@@ -107,7 +161,6 @@ h1 {
     padding: 25px;
     margin-bottom: 30px;
     position: relative;
-    overflow: hidden;
     transition: transform 0.2s;
 }
 
@@ -132,118 +185,21 @@ h1 {
     border-radius: 2px;
 }
 .done { background: rgba(0, 255, 65, 0.1); color: var(--neon-green); border: 1px solid var(--neon-green); }
-.wip { background: rgba(255, 165, 0, 0.1); color: orange; border: 1px solid orange; }
+.deployed { background: rgba(102, 252, 241, 0.1); color: var(--highlight); border: 1px solid var(--highlight); }
 
 .tech-tag {
     background: #000;
     color: var(--secondary);
     font-family: 'JetBrains Mono', monospace;
-    font-size: 0.8em;
+    font-size: 0.75em;
     padding: 3px 8px;
     border: 1px solid #333;
     margin-right: 5px;
-}
-
-.cv-wrapper {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 0;
-    border: 1px solid #333;
-    background: var(--card-bg);
-    min-height: 800px;
-}
-
-.cv-sidebar {
-    background-color: #151b24;
-    padding: 30px;
-    border-right: 1px solid #333;
-}
-
-.cv-main {
-    padding: 40px;
-}
-
-.cv-sidebar h3 {
-    color: var(--highlight);
-    font-size: 1em;
-    text-transform: uppercase;
-    margin-top: 30px;
-    border-bottom: 1px solid #333;
-    padding-bottom: 5px;
-}
-
-.cv-sidebar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.cv-sidebar li::before {
-    content: "> ";
-    color: var(--secondary);
-    font-weight: bold;
-}
-
-.cv-main h2 {
-    color: var(--highlight);
-    font-size: 1.2em;
-    border-bottom: 1px solid var(--secondary);
-    padding-bottom: 10px;
-    margin-top: 30px;
-}
-
-.exp-item {
-    margin-bottom: 25px;
-    border-left: 2px solid #333;
-    padding-left: 15px;
+    display: inline-block;
+    margin-bottom: 5px;
 }
 
 @media (max-width: 768px) {
-    .cv-wrapper { grid-template-columns: 1fr; }
+    .project-grid { grid-template-columns: 1fr; }
     nav div { gap: 15px; font-size: 0.8em; }
-}
-
-@media print {
-    @page {
-        margin: 0;
-        size: A4;
-    }
-
-    nav, .btn, center {
-        display: none !important;
-    }
-
-    body {
-        background-color: #0b0c10 !important;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-        margin: 0;
-        padding: 0;
-    }
-
-    .cv-wrapper {
-        border: none;
-        min-height: 100vh;
-        display: grid;
-        grid-template-columns: 35% 65% !important; 
-    }
-
-    .cv-sidebar ul li {
-        white-space: nowrap; 
-        font-size: 14px !important; 
-        margin-bottom: 5px;
-    }
-
-    .cv-sidebar h3 {
-        font-size: 12px;
-        margin-top: 20px;
-    }
-
-    .cv-main {
-        padding: 20px !important;
-    }
-
-    .exp-item, li {
-        page-break-inside: avoid;
-        break-inside: avoid;
-    }
 }

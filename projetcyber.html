@@ -34,7 +34,7 @@
                 <span class="tech-tag">Wireshark</span>
             </div>
 
-            <ul style="background: #111; padding: 15px; border-radius: 4px; border: 1px solid #333; list-style: none;">
+            <ul class="custom-list-block">
                 <li><span style="color:var(--highlight)">[>]</span> Scan : Détection vulnérabilité MS17-010.</li>
                 <li><span style="color:var(--highlight)">[>]</span> Exploit : Injection payload Meterpreter.</li>
                 <li><span style="color:var(--highlight)">[>]</span> Post-Ex : Dump SAM & Cracking NTLM.</li>
@@ -55,27 +55,47 @@
                 <span class="tech-tag">Zabbix</span>
             </div>
 
-            <p style="border-left: 3px solid var(--secondary); padding-left: 10px;">
+            <p style="border-left: 3px solid var(--secondary); padding-left: 10px; font-size: 0.9em; color: #aaa;">
                 Intégration de sondes Zabbix pour monitorer les pics de trafic (DDoS) et les altérations de fichiers critiques.
             </p>
             <a href="https://github.com/AnisDerriche/projet-infra" target="_blank" class="btn">CODE SOURCE</a>
         </div>
 
-        <div class="project-card" style="border-color: orange;">
+        <div class="project-card highlight-project">
             <div class="project-header">
-                <h3 style="color: orange;">DRAGON SHIELD (AD)</h3>
-                <span class="status-badge wip">IN PROGRESS</span>
+                <h3>ARCHITECTURE RÉSILIENTE : DRAGON EMOTORS</h3>
+                <span class="status-badge done">DEPLOYED</span>
             </div>
-            <p><strong>Client :</strong> Dragon Emotors (Simu).</p>
-            <p>Déploiement d'une forêt Active Directory complète pour 50 utilisateurs avec services RDS et Fichiers.</p>
             
-            <div style="margin: 15px 0;">
-                <span class="tech-tag">Windows Server</span>
-                <span class="tech-tag">GPO</span>
-                <span class="tech-tag">Kerberos</span>
+            <p><strong>Contexte :</strong> Mission de déploiement d'une infrastructure critique pour un constructeur de moteurs électriques (50 collaborateurs).</p>
+            
+            <div class="project-grid">
+                <div class="project-column">
+                    <h4><span style="color:var(--highlight)">#</span> PILIER DÉFENSIF</h4>
+                    <ul class="custom-list">
+                        <li><strong>Active Directory :</strong> Design d'une arborescence d'OU et groupes par services (Direction, Prod, RH).</li>
+                        <li><strong>Hardening GPO :</strong> Durcissement des endpoints, politiques de mots de passe et restriction des privilèges.</li>
+                        <li><strong>Convergence Linux :</strong> Serveur de fichiers Debian/Samba intégré à l'AD avec authentification Kerberos.</li>
+                    </ul>
+                </div>
+                <div class="project-column">
+                    <h4><span style="color:var(--highlight)">#</span> OPS & DISPONIBILITÉ</h4>
+                    <ul class="custom-list">
+                        <li><strong>Accès Distant :</strong> Déploiement de services RDS sécurisés pour le travail sur clients légers.</li>
+                        <li><strong>Monitoring SOC :</strong> Supervision via Zabbix pour détection d'intrusions et analyse forensique.</li>
+                        <li><strong>Résilience :</strong> Architecture validée lors d'un audit offensif (Pentest) par un tiers externe.</li>
+                    </ul>
+                </div>
             </div>
 
-            <p>En préparation d'un Pentest externe. Focus actuel : Durcissement des GPO et cloisonnement des accès.</p>
+            <div style="margin-top: 20px;">
+                <span class="tech-tag">Windows Server</span>
+                <span class="tech-tag">Debian</span>
+                <span class="tech-tag">Samba AD</span>
+                <span class="tech-tag">GPO Hardening</span>
+                <span class="tech-tag">Zabbix</span>
+                <span class="tech-tag">RDS/RDP</span>
+            </div>
         </div>
 
     </div>
