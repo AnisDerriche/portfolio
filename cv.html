@@ -17,112 +17,121 @@
     </nav>
 
     <div class="container">
-        
         <div class="cv-wrapper">
             
             <aside class="cv-sidebar">
-
-                <div style="font-family: 'JetBrains Mono'; font-size: 0.85em; color: #fff; margin-bottom: 20px;">
-                    STATUS: <span style="color: var(--neon-green);">ONLINE</span><br>
-                    LOC: Oise, Lille, Île-de-France, FR
+                <div class="status-box">
+                    <span class="label">STATUS:</span> <span class="value online">ONLINE</span><br>
+                    <span class="label">LOC:</span> <span class="value">Oise / Lille / IDF</span>
                 </div>
 
                 <h3>// CONTACT</h3>
-                <ul style="font-size: 0.9em;">
+                <ul class="sidebar-list">
                     <li>derricheanis06@proton.me</li>
                     <li>07 80 20 50 93</li>
                     <li>Permis B</li>
                 </ul>
 
                 <h3>// HARD SKILLS</h3>
-                <ul>
-                    <li>Python / Bash</li>
-                    <li>Golang</li>
-                    <li>Ansible Auto.</li>
-                    <li>Zabbix Monit.</li>
-                    <li>Virtualisation</li>
-                    <li>Kali Linux</li>
-                    <li style="color: var(--neon-green);">TryHackMe Top 8%</li>
+                <ul class="sidebar-list">
+                    <li>Python / Bash / Golang</li>
+                    <li>Ansible (Automation)</li>
+                    <li>Zabbix (Monitoring)</li>
+                    <li>Virtualisation & Linux</li>
+                    <li>Kali Linux & Pentesting</li>
+                    <li class="highlight-skill">TryHackMe Top 8%</li>
                 </ul>
 
                 <h3>// SOFT SKILLS</h3>
-                <ul>
+                <ul class="sidebar-list">
                     <li>Polyvalence</li>
-                    <li>Travail d'équipe</li>
-                    <li>Adaptabilité</li>
-                    <li>Curiosité</li>
-                </ul>
-
-                <h3>// INTÉRÊTS</h3>
-                <ul>
-                    <li>Boxe</li>
-                    <li>CTF / Veille</li>
-                    <li>Culture (Musées)</li>
+                    <li>Travail d'équipe </li>
+                    <li>Adaptabilité </li>
+                    <li>Curiosité technique </li>
                 </ul>
             </aside>
 
             <section class="cv-main">
-                <h1>ANIS DERRICHE</h1>
-                <p style="color: var(--highlight); font-family: 'JetBrains Mono';"> Recherche Stage (10-12 semaines)</p>
-                
-                <p style="margin-bottom: 20px;">
-                    Profil déterminé et autonome. Passionné par l'architecture sécurisée et l'offensive pour mieux défendre.
-                </p>
+                <header class="cv-header">
+                    <h1>ANIS DERRICHE </h1>
+                    <div class="job-title">RECHERCHE STAGE (10-12 SEMAINES) </div>
+                    <p class="profile-desc">
+                        Profil déterminé et autonome. Passionné par l'architecture sécurisée et l'offensive pour mieux défendre .
+                    </p>
+                </header>
 
-                <h2>EXPÉRIENCE OPÉRATIONNELLE</h2>
+                <h2 class="section-title">EXPÉRIENCE OPÉRATIONNELLE</h2>
 
-                <div class="exp-item">
-                    <strong style="color: #fff;">INFRASTRUCTURE CLOUD (Projet)</strong><br>
-                    <em style="color: #888;">Automatisation & Supervision</em>
-                    <ul style="margin-top: 10px;">
-                        <li><strong>SysAdmin:</strong> Linux (LAMP), DNS/DHCP, ownCloud.</li>
-                        <li><strong>Secu:</strong> Hardening, Firewalling, Plan de Reprise (PRA).</li>
-                        <li><strong>DevOps:</strong> Déploiement via Ansible, Alerting Zabbix.</li>
-                    </ul>
-                </div>
-
-                <div class="exp-item">
-                    <strong style="color: #fff;">AUDIT D'INTRUSION (Challenge 48h)</strong><br>
-                    <em style="color: #888;">Pentest Windows</em>
-                    <ul style="margin-top: 10px;">
-                        <li>Exploitation SMB (EternalBlue) via Metasploit.</li>
-                        <li>Exfiltration de données critiques.</li>
-                        <li>Cracking de mots de passe (Hashcat) pour élévation Admin.</li>
-                    </ul>
-                </div>
-
-                <div class="exp-item">
-                    <strong style="color: #fff;">BUT (Job Étudiant)</strong><br>
-                    <em style="color: #888;">Vendeur Conseil | Juin - Août 2024</em>
-                    <ul style="margin-top: 10px;">
-                        <li>Gestion logistique et relation client.</li>
-                    </ul>
-                </div>
-
-                <h2>FORMATION</h2>
-                
-                <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
-                    <div>
-                        <strong style="color: #fff;">Bachelor Cybersécurité</strong><br>
-                        Ynov Campus | 2024 - En cours
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <h4>ARCHITECTURE RÉSILIENTE (Dragon Emotors)</h4>
+                        <span class="exp-tag">SECURE BY DESIGN</span>
+                    </div>
+                    <div class="project-grid" style="margin-top: 0; gap: 15px;">
+                        <div class="project-column">
+                            <ul class="exp-list">
+                                <li><strong>Active Directory:</strong> Design d'OU et Groupes par services.</li>
+                                <li><strong>Hardening:</strong> Durcissement via GPO et moindre privilège .</li>
+                                <li><strong>Hybride:</strong> Intégration Linux Samba avec authentification AD.</li>
+                            </ul>
+                        </div>
+                        <div class="project-column">
+                            <ul class="exp-list">
+                                <li><strong>RDS:</strong> Accès distant sécurisé pour clients légers.</li>
+                                <li><strong>SOC:</strong> Monitoring Zabbix (Intrusions & Flux).</li>
+                                <li><strong>Audit:</strong> Architecture validée par un Pentest externe.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
-                <div style="display: flex; justify-content: space-between;">
-                    <div>
-                        <strong style="color: #fff;">Baccalauréat Général</strong><br>
-                        St-Joseph du Moncel | 2024<br>
-                        <small>Spécialités NSI & SES</small>
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <h4>INFRASTRUCTURE CLOUD (Projet)</h4>
+                        <span class="exp-tag">AUTOMATION</span>
                     </div>
+                    <ul class="exp-list">
+                        <li><strong>SysAdmin:</strong> Administration Linux (LAMP) et cloud privé (ownCloud).</li>
+                        <li><strong>Sécurité:</strong> Pare-feu et stratégie de sauvegarde PRA/PCA.</li>
+                        <li><strong>DevOps:</strong> Automatisation des déploiements via Ansible.</li>
+                    </ul>
                 </div>
 
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <h4>AUDIT D'INTRUSION (Challenge 48h)</h4>
+                        <span class="exp-tag">OFFENSIVE</span>
+                    </div>
+                    <ul class="exp-list">
+                        <li>Exploitation de la faille EternalBlue via Metasploit.</li>
+                        <li>Analyse de hachages (Hashcat) et Brute Force pour élévation de privilèges.</li>
+                        <li>Exfiltration de bases de données compromises vers poste attaquant.</li>
+                    </ul>
+                </div>
+
+                <h2 class="section-title">FORMATION</h2>
+                
+                <div class="edu-item">
+                    <div class="edu-main">
+                        <strong>Bachelor Cybersécurité</strong>
+                        <span>Lille Ynov Campus</span>
+                    </div>
+                    <div class="edu-meta">2024 - En cours</div>
+                </div>
+
+                <div class="edu-item">
+                    <div class="edu-main">
+                        <strong>Baccalauréat Général</strong>
+                        <span>St-Joseph du Moncel | Spécialités NSI & SES</span>
+                    </div>
+                    <div class="edu-meta">2024</div>
+                </div>
             </section>
         </div>
 
-        <center style="margin-top: 30px;">
-           <a href="CV_AnisDerriche.pdf" download="CV_AnisDerriche.pdf" class="btn">DOWNLOAD .PDF</a>
-        </center>
-
+        <div class="cv-footer">
+            <a href="CV_Anis_Derriche_stage.pdf" download class="btn">DOWNLOAD_TACTICAL_CV.PDF</a>
+        </div>
     </div>
 
 </body>

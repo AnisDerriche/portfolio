@@ -1,14 +1,18 @@
+/* Importation des polices techniques */
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600&display=swap');
 
 :root {
     --bg-color: #0b0c10;
-    --card-bg: #1f2833;
+    --card-bg: #111418;    /* Fond sombre type terminal */
+    --sidebar-bg: #0d1013; /* Fond sidebar légèrement plus profond */
     --text-main: #c5c6c7;
-    --highlight: #66fcf1;
-    --secondary: #45a29e;
-    --neon-green: #00ff41;
+    --highlight: #66fcf1;  /* Cyan Cyber */
+    --secondary: #45a29e;  /* Bleu canard */
+    --neon-green: #00ff41; /* Vert Matrix */
+    --border-color: #2a2f35;
 }
 
+/* Base & Background Grid */
 body {
     background-color: var(--bg-color);
     color: var(--text-main);
@@ -30,6 +34,7 @@ body::before {
     pointer-events: none;
 }
 
+/* Navigation */
 nav {
     background-color: rgba(11, 12, 16, 0.95);
     border-bottom: 1px solid var(--secondary);
@@ -64,8 +69,9 @@ nav a:hover, nav a.active {
     text-shadow: 0 0 8px rgba(102, 252, 241, 0.6);
 }
 
+/* Conteneurs */
 .container {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 40px auto;
     padding: 0 20px;
 }
@@ -82,124 +88,197 @@ h1 {
     padding-left: 15px;
 }
 
-/* Nouveaux styles pour la grille de projet */
-.project-grid {
+/* --- STRUCTURE CV DASHBOARD --- */
+.cv-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-    margin-top: 20px;
+    grid-template-columns: 280px 1fr;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    min-height: 800px;
 }
 
-.project-column h4 {
-    font-size: 0.85em;
-    margin-bottom: 15px;
-    color: var(--secondary);
-    border-bottom: 1px solid #333;
-    padding-bottom: 5px;
+.cv-sidebar {
+    background: var(--sidebar-bg);
+    padding: 30px 20px;
+    border-right: 1px solid var(--border-color);
 }
 
-.custom-list {
+.cv-main {
+    padding: 40px;
+    background: var(--card-bg);
+}
+
+/* Sidebar Elements */
+.status-box {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8em;
+    margin-bottom: 30px;
+    padding: 10px;
+    border: 1px solid #1a1d21;
+    line-height: 1.8;
+}
+
+.online { color: var(--neon-green); font-weight: bold; }
+
+.sidebar-list {
     list-style: none;
     padding: 0;
-    margin: 0;
-    font-size: 0.85em;
+    margin: 0 0 30px 0;
 }
 
-.custom-list li {
+.sidebar-list li {
+    font-size: 0.85em;
     margin-bottom: 8px;
-    padding-left: 18px;
-    position: relative;
-    line-height: 1.4;
+    color: #888;
 }
 
-.custom-list li::before {
-    content: "→";
-    position: absolute;
-    left: 0;
-    color: var(--highlight);
+.sidebar-list li::before {
+    content: "> ";
+    color: var(--secondary);
+}
+
+.highlight-skill {
+    color: var(--neon-green) !important;
     font-weight: bold;
 }
 
-.custom-list-block {
-    background: #111; 
-    padding: 15px; 
-    border-radius: 4px; 
-    border: 1px solid #333; 
-    list-style: none;
-    font-family: 'JetBrains Mono', monospace;
+.cv-sidebar h3 {
     font-size: 0.9em;
-}
-
-.highlight-project {
-    border-left: 4px solid var(--highlight) !important;
-    background: linear-gradient(to right, rgba(102, 252, 241, 0.03), transparent);
-}
-
-.btn {
-    display: inline-block;
-    background: transparent;
-    border: 1px solid var(--highlight);
     color: var(--highlight);
-    padding: 8px 20px;
-    font-family: 'JetBrains Mono', monospace;
-    text-decoration: none;
-    font-size: 0.85em;
-    font-weight: bold;
-    transition: all 0.3s;
-    margin-top: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #1a1d21;
 }
 
-.btn:hover {
-    background: var(--highlight);
-    color: var(--bg-color);
-    box-shadow: 0 0 15px rgba(102, 252, 241, 0.4);
-}
-
-.project-card {
+/* --- CARTES DE PROJETS & EXPERIENCES --- */
+.project-card, .exp-card {
     background-color: var(--card-bg);
-    border: 1px solid #333;
+    border: 1px solid var(--border-color);
     padding: 25px;
     margin-bottom: 30px;
     position: relative;
     transition: transform 0.2s;
 }
 
-.project-card:hover {
-    transform: translateY(-2px);
-    border-color: var(--secondary);
+.highlight-project {
+    border-left: 4px solid var(--highlight) !important;
+    background: linear-gradient(to right, rgba(102, 252, 241, 0.02), transparent);
 }
 
-.project-header {
+.project-header, .exp-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid #2a2f35;
     padding-bottom: 15px;
     margin-bottom: 20px;
 }
 
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 15px;
+}
+
+.project-column h4 {
+    font-size: 0.85em;
+    color: var(--secondary);
+    margin-bottom: 10px;
+}
+
+/* Listes & Tags */
+.custom-list, .exp-list {
+    list-style: none;
+    padding: 0;
+    font-size: 0.85em;
+}
+
+.custom-list li, .exp-list li {
+    margin-bottom: 8px;
+    padding-left: 18px;
+    position: relative;
+}
+
+.custom-list li::before, .exp-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--highlight);
+}
+
+.custom-list-block {
+    background: #080a0c;
+    padding: 15px;
+    border: 1px solid #1a1d21;
+    list-style: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85em;
+    margin-top: 15px;
+    color: #ccc;
+}
+
 .status-badge {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 0.75em;
-    padding: 4px 8px;
+    font-size: 0.7em;
+    padding: 4px 10px;
     border-radius: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
-.done { background: rgba(0, 255, 65, 0.1); color: var(--neon-green); border: 1px solid var(--neon-green); }
-.deployed { background: rgba(102, 252, 241, 0.1); color: var(--highlight); border: 1px solid var(--highlight); }
+
+.done { border: 1px solid var(--neon-green); color: var(--neon-green); }
+.deployed { border: 1px solid var(--highlight); color: var(--highlight); }
+.wip { border: 1px solid orange; color: orange; }
 
 .tech-tag {
     background: #000;
     color: var(--secondary);
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.75em;
-    padding: 3px 8px;
-    border: 1px solid #333;
-    margin-right: 5px;
+    padding: 4px 10px;
+    margin-right: 8px;
+    margin-bottom: 8px;
     display: inline-block;
-    margin-bottom: 5px;
+    border: 1px solid #1a1d21;
 }
 
-@media (max-width: 768px) {
+/* Boutons */
+.btn {
+    display: inline-block;
+    background: transparent;
+    border: 1px solid var(--highlight);
+    color: var(--highlight);
+    padding: 10px 25px;
+    font-family: 'JetBrains Mono', monospace;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.85em;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background: var(--highlight);
+    color: #000;
+    box-shadow: 0 0 15px rgba(102, 252, 241, 0.4);
+}
+
+/* Footer & Formation */
+.edu-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    border-left: 2px solid #1a1d21;
+    padding-left: 15px;
+}
+
+.edu-main strong { color: var(--highlight); display: block; }
+.edu-meta { font-family: 'JetBrains Mono', monospace; color: var(--secondary); }
+
+/* Responsive */
+@media (max-width: 850px) {
+    .cv-wrapper { grid-template-columns: 1fr; }
+    .cv-sidebar { border-right: none; border-bottom: 1px solid var(--border-color); }
     .project-grid { grid-template-columns: 1fr; }
-    nav div { gap: 15px; font-size: 0.8em; }
+    nav div { gap: 15px; }
 }
