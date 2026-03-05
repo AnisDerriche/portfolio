@@ -282,3 +282,32 @@ h1 {
     .project-grid { grid-template-columns: 1fr; }
     nav div { gap: 15px; }
 }
+
+/* --- INTEGRATION PDF DIRECTE (Page CV) --- */
+.pdf-wrapper {
+    background: var(--card-bg);
+    border: 1px solid var(--highlight); /* Bordure Cyan Cyber pour coller au thème */
+    padding: 5px;
+    box-shadow: 0 0 15px rgba(102, 252, 241, 0.1); 
+    height: 85vh; 
+    min-height: 800px;
+    display: flex;
+}
+
+.pdf-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: #fff; /* Fond blanc au cas où le PDF met du temps à charger */
+}
+
+/* --- STYLE DE L'IMAGE DU CV --- */
+.cv-image {
+    width: 100%;
+    max-width: 850px; /* Évite que le CV soit gigantesque sur un grand écran */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centre l'image */
+    border: 1px solid var(--highlight); /* Petite bordure cyber */
+    box-shadow: 0 0 20px rgba(102, 252, 241, 0.15); /* Léger halo */
+}
