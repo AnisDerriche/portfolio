@@ -56,6 +56,41 @@
 
             <a href="https://github.com/nathangerardeaux/palmon" target="_blank" class="btn">VOIR L'ARCHITECTURE (GITHUB)</a>
         </div>
+        
+        <div class="project-card">
+            <div class="project-header">
+                <h3>VGS ANALYTICS : DATA VISUALIZATION</h3>
+                <span class="status-badge deployed">LIVE / STREMLIT</span>
+            </div>
+            
+            <p><strong>Type :</strong> Dashboard d'analyse de données massives (Dataset de +16k entrées).</p>
+            
+            <p>Développement d'une application de Business Intelligence permettant d'explorer les tendances mondiales de l'industrie vidéoludique. Ce projet démontre une maîtrise du pipeline de données : du nettoyage (Data Wrangling) à la visualisation interactive.</p>
+    
+            <div style="margin: 15px 0;">
+                <span class="tech-tag">Python 3</span>
+                <span class="tech-tag">Streamlit</span>
+                <span class="tech-tag">Pandas</span>
+                <span class="tech-tag">Plotly Express</span>
+            </div>
+            
+            <ul style="background: #111; padding: 15px; border-radius: 4px; border: 1px solid #333; list-style: none; font-size: 0.9em; color: #ccc;">
+                <li style="margin-bottom: 8px;"><span style="color:var(--highlight)">[>]</span> <strong>Analyse Exploratoire (EDA) :</strong> Traitement des données par plateforme, genre et éditeur avec gestion des valeurs manquantes.</li>
+                <li style="margin-bottom: 8px;"><span style="color:var(--highlight)">[>]</span> <strong>Visualisation Dynamique :</strong> Implémentation de graphiques interactifs (Histogrammes, Pie Charts) reflétant les ventes globales et régionales.</li>
+                <li><span style="color:var(--highlight)">[>]</span> <strong>Filtrage Temps Réel :</strong> Interface utilisateur permettant de segmenter les données par année ou par plateforme pour une analyse granulaire.</li>
+            </ul>
+    
+            <div style="background: #0b0c10; color: #00ff41; padding: 15px; border: 1px solid #333; font-family: 'JetBrains Mono', monospace; font-size: 0.8em; margin: 15px 0; border-left: 3px solid var(--highlight);">
+                <span style="color: #666;"># Aperçu du traitement de données</span><br>
+                import pandas as pd<br>
+                df = pd.read_csv('video_games_sales.csv')<br>
+                <span style="color: #666;"># Nettoyage des données temporelles</span><br>
+                df = df.dropna(subset=['Year'])<br>
+                df['Year'] = df['Year'].astype(int)
+            </div>
+    
+            <a href="https://github.com/Rafal60/Analyse-de-dataset.git" class="btn">VOIR LE DASHBOARD</a>
+        </div>
 
         <div class="project-card" style="border-color: orange;">
             <div class="project-header">
@@ -78,8 +113,10 @@
             
             <a href="https://github.com/GabrielPETER123/ganis" target="_blank" class="btn">ACCÉDER AU REPO</a>
         </div>
-
+        
+        
     </div>
+
 
 </body>
 </html>
