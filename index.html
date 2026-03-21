@@ -37,19 +37,44 @@
             <a href="projetcyber.html" class="btn" style="border-color: #444; color: #ccc;">DERNIÈRES OPÉRATIONS</a>
         </div>
 
-        <div style="margin-top: 80px; text-align: left; background: #000; padding: 20px; border-radius: 5px; font-family: 'JetBrains Mono'; font-size: 0.9em; border: 1px solid #333;">
-            <span style="color: #00ff41;">➜  ~</span> whoami<br>
-            Étudiant Cybersécurité @ Ynov Campus<br><br>
-            <span style="color: #00ff41;">➜  ~</span> cat skills.txt<br>
-            [+] Python Scripting<br>
-            [+] Infrastructure<br>
-            [+] Infrastructure monitoring<br>
-            [+] Infrastructure security<br>
-            [+] Virtualisation<br>
-            [+] Kali Linux<br>
+        <div class="dashboard-grid">
+            
+            <div class="terminal-box">
+                <span style="color: #00ff41;">➜  ~</span> whoami<br>
+                Étudiant Cybersécurité @ Ynov Campus<br><br>
+                <span style="color: #00ff41;">➜  ~</span> cat skills.txt<br>
+                [+] Python Scripting<br>
+                [+] Infrastructure<br>
+                [+] Infrastructure monitoring<br>
+                [+] Infrastructure security<br>
+                [+] Virtualisation<br>
+                [+] Kali Linux<br>
+            </div>
+            <div class="cert-card" onclick="openModal()">
+                <div class="cert-card">
+                    <div class="cert-img-wrapper">
+                        <img src="Certification_AZ900.png" alt="Certification Microsoft">
+                    </div>
+                    <div class="cert-title">
+                        AZ-900: AZURE FUNDAMENTALS
+                    </div>
+                </div>
+            </div>    
         </div>
-
+    </div>
+    <div id="certModal" class="modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" src="Certification_AZ900.png" alt="AZ-900">
+        <div class="modal-caption">AZ-900: AZURE FUNDAMENTALS</div>
     </div>
 
+    <script>
+        function openModal() {
+            document.getElementById("certModal").style.display = "flex";
+        }
+        function closeModal() {
+            document.getElementById("certModal").style.display = "none";
+        }
+    </script>
 </body>
 </html>
